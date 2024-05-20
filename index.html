@@ -3,39 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game with Pictures</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: Arial, sans-serif;
-        }
-        #gameArea {
-            border: 1px solid #000;
-            background-color: #f0f0f0;
-            margin-top: 20px;
-        }
-        #controls {
-            margin-top: 10px;
-        }
-        #controls button {
-            margin: 5px;
-            padding: 10px;
-        }
-    </style>
+    <title>Image Click, Move, and Explode</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Snake Game with Pictures</h1>
-    <input type="file" id="imageUpload" accept="image/*" multiple>
-    <input type="file" id="dotUpload" accept="image/*">
-    <canvas id="gameArea" width="400" height="400"></canvas>
-    <div id="controls">
-        <button onclick="changeDirection('up')">Up</button>
-        <button onclick="changeDirection('left')">Left</button>
-        <button onclick="changeDirection('down')">Down</button>
-        <button onclick="changeDirection('right')">Right</button>
+    <h1>Upload and Click to Move and Explode Image</h1>
+    <input type="file" id="imageUploader">
+    <div id="imageContainer">
+        <img id="uploadedImage" src="" alt="Click to move me!">
+        <img id="explosionGif" src="https://i.gifer.com/origin/a0/a07ad08920f303f655251b1a0b353b86_w200.gif" alt="Explosion" style="display: none;">
     </div>
-    <script src="snake.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
