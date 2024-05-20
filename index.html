@@ -1,33 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Minecraft Creeper Explosion</title>
-  <style>
-    body {
-      text-align: center;
-      margin-top: 100px;
-    }
-    #creeper {
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game with Pictures</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        #gameArea {
+            border: 1px solid #000;
+            background-color: #f0f0f0;
+            margin-top: 20px;
+        }
+        #controls {
+            margin-top: 10px;
+        }
+        #controls button {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-  <h1>HOLY FUCKING SHIT ITS A FUCKING CREEPER fuck crudmoney</h1>
-  <p id="status">DONT FUCKING CLICK IT!</p>
-  <img id="creeper" src="https://upload.wikimedia.org/wikipedia/en/4/49/Creeper_%28Minecraft%29.png" alt="Minecraft Creeper" width="200" height="200">
-  <script>
-    var creeperImage = document.getElementById('creeper');
-    var statusText = document.getElementById('status');
-    
-    creeperImage.addEventListener('click', function() {
-      creeperImage.src = 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDZocTlzbXk5ZWlud2UwbnF3cHV5ZWVwb2JrM3R5ZHdoaHNqcTRvYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/oe33xf3B50fsc/giphy.gif';
-      statusText.textContent = "FUCK WHY DID YOU FUCKING CLICK IT";
-      setTimeout(function() {
-        creeperImage.src = 'https://upload.wikimedia.org/wikipedia/en/4/49/Creeper_%28Minecraft%29.png';
-        statusText.textContent = "DONT FUCKING CLICK IT!";
-      }, 2000);
-    });
-  </script>
+    <h1>Snake Game with Pictures</h1>
+    <input type="file" id="imageUpload" accept="image/*" multiple>
+    <canvas id="gameArea" width="400" height="400"></canvas>
+    <div id="controls">
+        <button onclick="changeDirection('up')">Up</button>
+        <button onclick="changeDirection('left')">Left</button>
+        <button onclick="changeDirection('down')">Down</button>
+        <button onclick="changeDirection('right')">Right</button>
+    </div>
+    <script src="snake.js"></script>
 </body>
 </html>
