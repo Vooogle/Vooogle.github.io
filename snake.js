@@ -1,115 +1,40 @@
-const canvas = document.getElementById('gameArea');
-const ctx = canvas.getContext('2d');
-const uploadInput = document.getElementById('imageUpload');
-const dotUpload = document.getElementById('dotUpload');
-let snake = [{ x: 10, y: 10 }];
-let direction = { x: 0, y: 0 };
-let images = [];
-let dotImage = null;
-let food = getRandomFoodPosition();
-
-uploadInput.addEventListener('change', handleImageUpload);
-dotUpload.addEventListener('change', handleDotUpload);
-
-function handleImageUpload(event) {
-    const files = event.target.files;
-    for (let file of files) {
+document.getElementById('imageUploader').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
-            const img = new Image();
-            img.src = e.target.result;
-            images.push(img);
+            const image = document.getElementById('uploadedImage');
+            image.src = e.target.result;
+            image.style.display = 'block';
         };
         reader.readAsDataURL(file);
     }
-}
+});
 
-function handleDotUpload(event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const img = new Image();
-        img.src = e.target.result;
-        dotImage = img;
-    };
-    reader.readAsDataURL(file);
-}
+document.getElementById('uploadedImage').addEventListener('click', function(event) {
+    const container = document.getElementById('imageContainer');
+    const image = event.target;
+    const explosion = document.getElementById('explosionGif');
 
-function drawSnake() {
-    snake.forEach((segment, index) => {
-        const img = images[index % images.length];
-        if (img) {
-            ctx.drawImage(img, segment.x * 20, segment.y * 20, 20, 20);
-        } else {
-            ctx.fillStyle = 'green';
-            ctx.fillRect(segment.x * 20, segment.y * 20, 20, 20);
-        }
-    });
-}
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+    const imageWidth = image.offsetWidth;
+    const imageHeight = image.offsetHeight;
 
-function drawFood() {
-    if (dotImage) {
-        ctx.drawImage(dotImage, food.x * 20, food.y * 20, 20, 20);
-    } else {
-        ctx.fillStyle = 'red';
-        ctx.fillRect(food.x * 20, food.y * 20, 20, 20);
-    }
-}
+    const randomX = Math.floor(Math.random() * (containerWidth - imageWidth));
+    const randomY = Math.floor(Math.random() * (containerHeight - imageHeight));
 
-function advanceSnake() {
-    const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
+    // Move the image to a random position
+    image.style.left = `${randomX}px`;
+    image.style.top = `${randomY}px`;
 
-    if (head.x < 0 || head.y < 0 || head.x >= canvas.width / 20 || head.y >= canvas.height / 20) {
-        resetGame();
-        return;
-    }
+    // Display the explosion GIF at the image's current position
+    explosion.style.left = `${image.style.left}`;
+    explosion.style.top = `${image.style.top}`;
+    explosion.style.display = 'block';
 
-    snake.unshift(head);
-
-    if (head.x === food.x && head.y === food.y) {
-        food = getRandomFoodPosition();
-    } else {
-        snake.pop();
-    }
-}
-
-function getRandomFoodPosition() {
-    let position;
-    while (!position || snake.some(segment => segment.x === position.x && segment.y === position.y)) {
-        position = {
-            x: Math.floor(Math.random() * canvas.width / 20),
-            y: Math.floor(Math.random() * canvas.height / 20)
-        };
-    }
-    return position;
-}
-
-function resetGame() {
-    snake = [{ x: 10, y: 10 }];
-    direction = { x: 0, y: 0 };
-    food = getRandomFoodPosition();
-}
-
-function gameLoop() {
-    if (images.length === 0 || !dotImage) {
-        requestAnimationFrame(gameLoop);
-        return;
-    }
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    advanceSnake();
-    drawSnake();
-    drawFood();
-    requestAnimationFrame(gameLoop);
-}
-
-function changeDirection(dir) {
-    switch(dir) {
-        case 'up': if (direction.y === 0) direction = { x: 0, y: -1 }; break;
-        case 'down': if (direction.y === 0) direction = { x: 0, y: 1 }; break;
-        case 'left': if (direction.x === 0) direction = { x: -1, y: 0 }; break;
-        case 'right': if (direction.x === 0) direction = { x: 1, y: 0 }; break;
-    }
-}
-
-requestAnimationFrame(gameLoop);
+    // Hide the explosion GIF after a short duration (e.g., 1 second)
+    setTimeout(() => {
+        explosion.style.display = 'none';
+    }, 1000);
+});
