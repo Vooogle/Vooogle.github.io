@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Jesus Picture and Sound</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div id="gameArea">
-        <div id="snake"></div>
-        <div id="food"></div>
-    </div>
-    <script src="script.js"></script>
+    <h1 id="text">Oh, hey its Jesus</h1>
+    <img id="image" src="https://thumbs.dreamstime.com/z/divine-mercy-jesus-digital-painting-done-photoshop-182548279.jpg" alt="Jesus">
+    
+    <audio id="sound" src="https://wiki.teamfortress.com/w/images/a/a1/Airstrike_Crit_Sound.wav" preload="auto"></audio>
+    
+    <script>
+        document.getElementById("image").addEventListener("click", function() {
+            document.getElementById("sound").play();
+            document.getElementById("image").src = "https://i.ibb.co/KXr4WNd/jes.png";
+            document.getElementById("text").innerText = "WHAT THE FUCK, WHY DI- WHY DID YOU SHOOT JESUS???!";
+        });
+    </script>
 </body>
 </html>
