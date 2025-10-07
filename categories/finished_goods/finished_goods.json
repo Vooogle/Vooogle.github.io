@@ -1,6 +1,6 @@
 {
   "id": "finished_goods",
-  "name": "Finished Goods",
+  "name": "Evil Finished Goods",
   "description": "Pre‑assembled products and complete units.",
   "sub_categories_list": "finished_goods_subs.json",
   "list": "finished_goods_item_list.json"

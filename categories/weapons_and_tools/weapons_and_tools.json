@@ -1,6 +1,6 @@
 {
   "id": "weapons_and_tools",
-  "name": "Weapons And Tools",
+  "name": "Evil Weapons And Tools",
   "description": "Weapons And Tools for all evil deeds",
   "sub_categories_list": "weapons_and_tools_subs.json",
   "list": "weapons_and_tools_item_list.json"

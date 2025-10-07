@@ -1,6 +1,6 @@
 {
   "id": "clothing",
-  "name": "Clothing",
+  "name": "Evil Clothing",
   "description": "Clothing for all evil deeds",
   "sub_categories_list": "clothing_subs.json",
   "list": "clothing_item_list.json"
