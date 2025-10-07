@@ -1,0 +1,14 @@
+{
+  "id": "prison_stripe_shirt",
+  "name": "Striped Prison Shirt",
+  "purchase_setting": "count",
+  "price": 15.99,
+  "description": "For the classic look of a goon.",
+  "details": "details.txt",
+  "images": {
+    "thumbnail": "thumbnail.webp",
+    "gallery": [
+      "picture_1.webp",
+      "picture_2.webp"
+    ]}
+}
