@@ -1,10 +1,9 @@
 {
-  "id": "test_item",
-  "name": "Test Item",
-  "category": "clothing/for_villains",
+  "id": "nuclear_ore",
+  "name": "Uranium Ore",
   "purchase_setting": "count",
   "price": 99.99,
-  "description": "This is a placeholder product used for testing across all categories.",
+  "description": "This is raw uranium ore.",
   "details": "details.txt",
   "images": {
     "thumbnail": "thumbnail.webp",

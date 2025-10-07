@@ -1,0 +1,4 @@
+- The uranium inside is always a mixture of isotopes in fixed natural proportions:
+- U‑238 → ~99.27%
+- U‑235 → ~0.72%
+- U‑234 → ~0.005%
