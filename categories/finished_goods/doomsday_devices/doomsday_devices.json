@@ -1,0 +1,6 @@
+{
+  "id": "doomsday_devices",
+  "name": "Doomsday Devices",
+  "description": "For when you need a thing to threaten the heros with but you don't have the prep time.",
+  "item_list": "doomsday_devices_item_list.json"
+}

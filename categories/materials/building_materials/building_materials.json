@@ -1,0 +1,6 @@
+{
+  "id": "building_materials",
+  "name": "Building Materials",
+  "description": "Everything you need to build your evil lair.",
+  "list": "building_materials_item_list.json"
+}

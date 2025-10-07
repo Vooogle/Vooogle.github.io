@@ -1,0 +1,6 @@
+{
+  "id": "for_goons",
+  "name": "For goons",
+  "description": "Clothing for goons",
+  "list": "for_goons_item_list.json"
+}

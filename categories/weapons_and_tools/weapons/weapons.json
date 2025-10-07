@@ -1,0 +1,6 @@
+{
+  "id": "weapons",
+  "name": "Weapons",
+  "description": "Weapons for all evil deeds",
+  "list": "weapons_item_list.json"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "materials",
+  "name": "Materials",
+  "description": "materials for all evil deeds",
+  "sub_categories_list": "materials_subs.json",
+  "list": "materials_item_list.json"
+}

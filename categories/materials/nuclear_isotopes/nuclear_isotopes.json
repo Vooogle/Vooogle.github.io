@@ -1,0 +1,6 @@
+{
+  "id": "nuclear_isotopes",
+  "name": "Nuclear Isotopes",
+  "description": "Everything you need to nuke a country, or make a dirty bomb.",
+  "list": "nuclear_isotopes_item_list.json"
+}

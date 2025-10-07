@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesus Picture and Sound</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        img {
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Evil.Deals</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="text">Oh, hey its Jesus</h1>
-    <img id="image" src="https://thumbs.dreamstime.com/b/divine-mercy-jesus-digital-painting-done-photoshop-182548279.jpg" alt="Jesus">
-    
-    <audio id="sound" src="https://wiki.teamfortress.com/w/images/a/a1/Airstrike_Crit_Sound.wav" preload="auto"></audio>
-    
-    <script>
-        document.getElementById("image").addEventListener("click", function() {
-            document.getElementById("sound").play();
-            document.getElementById("image").src = "https://i.ibb.co/KXr4WNd/jes.png";
-            document.getElementById("text").innerText = "WHAT THE FUCK, WHY DI- WHY DID YOU SHOOT JESUS???!";
-        });
-    </script>
-</body>
-</html>
+
+<header>
+  <!-- Top bar: logo + search + cart -->
+  <div class="top-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/evil_deals_logo_1080x432.png" alt="Evil.Deals Logo">
+      </a>
+    </div>
+
+    <div class="header-right">
+      <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Search evil items..." />
+        <button id="search-button">Search</button>
+      </div>
+
+      <div id="cart-placeholder">
+        🛒 Cart (coming soon)
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation bar: categories + dropdowns -->
+  <nav id="category-nav"></nav>
+</header>
+
+<div id="main-content">
+
+  <section id="hero-carousel">
+    <div class="slides">
+      <!-- Slides will be injected here -->
+    </div>
+    <div class="carousel-indicators" id="carousel-indicators"></div>
+  </section>
+
+  <section id="flash-deals" style="display:none;">
+    <h2>ABSOLUTELY DISASTEROUS SALE</h2>
+    <div class="item-grid" id="flash-items"></div>
+  </section>
+
+  <section id="recommended">
+    <h2>Recommended for You</h2>
+    <div class="item-grid" id="recommended-items"></div>
+  </section>
+
+  <section id="search-results" style="display:none;">
+    <h2>Search Results</h2>
+    <div class="item-grid" id="search-items"></div>
+  </section>
+
+  <footer>
+    <p>
+      Disclaimer: evil.deals is a parody website created for entertainment purposes only.
+      We do not endorse, promote, or support illegal or harmful activities.
+    </p>
+  </footer>
+</div>
+
+<script src="store.js"></script>

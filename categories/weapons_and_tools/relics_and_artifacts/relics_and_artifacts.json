@@ -1,0 +1,6 @@
+{
+  "id": "relics_and_artifacts",
+  "name": "Relics and Artifacts",
+  "description": "Relics and Artifacts for all evil deeds",
+  "list": "relics_and_artifacts_item_list.json"
+}

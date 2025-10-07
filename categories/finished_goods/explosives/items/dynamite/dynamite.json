@@ -1,0 +1,14 @@
+{
+  "id": "dynamite",
+  "name": "Dynamite",
+  "purchase_setting": "count",
+  "price": 12.99,
+  "description": "Dynamite (Bundle of 12)",
+  "details": "details.txt",
+  "images": {
+    "thumbnail": "thumbnail.webp",
+    "gallery": [
+      "picture_1.webp",
+      "picture_2.webp"
+    ]}
+}

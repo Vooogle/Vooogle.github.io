@@ -1,0 +1,14 @@
+{
+  "id": "nuke_1",
+  "name": "Mark VI Aerial Bomb",
+  "purchase_setting": "count",
+  "price": 18000000.00,
+  "description": "Mark VI Aerial Bomb",
+  "details": "details.txt",
+  "images": {
+    "thumbnail": "thumbnail.webp",
+    "gallery": [
+      "picture_1.webp",
+      "picture_2.webp"
+    ]}
+}

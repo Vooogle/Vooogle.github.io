@@ -1,0 +1,6 @@
+{
+  "id": "furniture",
+  "name": "Furniture",
+  "description": "Evil Furniture",
+  "list": "furniture_item_list.json"
+}

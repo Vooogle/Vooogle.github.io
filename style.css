@@ -1,0 +1,374 @@
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('assets/fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('assets/fonts/AlteHaasGroteskBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  font-family: 'Alte Haas Grotesk', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e5e5e5;
+  color: #000000;
+}
+
+header {
+  font-family: 'Alte Haas Grotesk', Arial, sans-serif;
+  background: #222;
+  color: #eee;
+}
+
+.top-header {
+  font-family: 'Alte Haas Grotesk', Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#search-input {
+  width: 200px;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+#search-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  background: #444;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background: #666;
+}
+
+#cart-placeholder {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  background: #333;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-category {
+  position: relative;
+}
+
+.category-button {
+  position: relative;
+  background: none;
+  border: none;
+  color: #eee;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.category-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #df0000; /* evil orange highlight */
+  transition: width 0.3s ease;
+}
+
+.category-button:hover,
+.category-button:focus {
+  background: #555;
+  color: #fff;
+}
+.category-button:hover::after,
+.category-button:focus::after {
+  width: 100%;
+}
+
+
+.subcategory-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  padding: 0.5rem;
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 160px;
+}
+
+.subcategory-menu a {
+  display: block;
+  color: #eee;
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.subcategory-menu a:hover,
+.subcategory-menu a:focus {
+  background: #666;
+  color: #fff;
+}
+
+
+.nav-category:hover .subcategory-menu {
+  display: block;
+}
+
+#hero-carousel {
+  position: relative;
+  overflow: hidden;
+  background: #2f2f2f;
+  color: #eee;
+  margin-bottom: 2rem;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.slide img {
+  max-width: 350px;
+  margin-right: 2rem;
+  border-radius: 8px;
+}
+
+.slide-content {
+  flex: 1;
+}
+
+.slide-content h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.details-box {
+  background: #222;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-indicators span {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #555;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-indicators span.active {
+  background: #c00;
+}
+#flash-deals {
+  background: #fff3f3;
+  border: 2px solid #c00;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 6px;
+  animation: fadeIn 0.5s ease;
+}
+
+#flash-deals h2 {
+  color: #c00;
+  text-align: center;
+}
+
+.flash-price {
+  color: #c00;
+  font-weight: bold;
+}
+
+#flash-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+#flash-items .item-card {
+  background: #fff;
+  border: 2px solid #c00;
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+  transform: scale(1.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#flash-items .item-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(192, 0, 0, 0.4);
+}
+
+.old-price {
+  font-size: 0.85em;
+  color: #777;
+  margin-right: 0rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#recommended {
+  padding: 1rem;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.item-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.item-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.item-card h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.item-card .description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.item-card .price {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+#main-content {
+  transition: filter 0.3s ease;
+  position: relative;
+}
+
+.blur-active #main-content {
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.blur-active #main-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.103);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.blur-active #main-content::before {
+  opacity: 1;
+}
+
+footer {
+  background: #222;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #a1a1a1;
+}
+
+.price {
+  font-family: 'Alte Haas Grotesk', Arial, sans-serif;
+  font-weight: bold;
+  color: #111;
+}
+
+.price .currency {
+  font-size: 1em;
+  vertical-align: top;
+  margin-right: 0px;
+}
+
+.price .dollars {
+  font-size: 1.5em;
+}
+
+.price .cents {
+  font-size: 1em;
+  vertical-align: super;
+  margin-left: 0px;
+}

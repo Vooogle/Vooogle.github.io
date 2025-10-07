@@ -1,0 +1,14 @@
+{
+  "id": "spherical_bomb",
+  "name": "Spherical Iron Grenade",
+  "purchase_setting": "count",
+  "price": 23.99,
+  "description": "Very useful to give the hero and then run off.",
+  "details": "details.txt",
+  "images": {
+    "thumbnail": "thumbnail.webp",
+    "gallery": [
+      "picture_1.webp",
+      "picture_2.webp"
+    ]}
+}

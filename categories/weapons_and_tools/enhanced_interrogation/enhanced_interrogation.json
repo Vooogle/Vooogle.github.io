@@ -1,0 +1,6 @@
+{
+  "id": "enhanced_interrogation",
+  "name": "Enhanced Interrogation",
+  "description": "Enhanced Interrogation is really hard, but with these tools it becomes much easier.",
+  "list": "enhanced_interrogation_item_list.json"
+}

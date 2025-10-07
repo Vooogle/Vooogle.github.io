@@ -1,0 +1,6 @@
+{
+  "id": "thaumaturgical_materials",
+  "name": "Thaumaturgical Materials",
+  "description": "Magic is a potent ability, but sometimes you need an extra crystal or two.",
+  "list": "thaumaturgical_materials_item_list.json"
+}
