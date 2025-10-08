@@ -1,6 +1,7 @@
 [
   "categories/clothing/for_goons/items/balaclava/balaclava.json",
   "categories/clothing/for_goons/items/prison_stripe_shirt/prison_stripe_shirt.json",
+  "categories/clothing/for_villains/items/stained_scientist_coat/stained_scientist_coat.json",
   "categories/clothing/for_villains/items/unstained_scientist_coat/unstained_scientist_coat.json",
   "categories/finished_goods/doomsday_devices/items/test_item/test_item.json",
   "categories/finished_goods/explosives/items/dynamite/dynamite.json",
