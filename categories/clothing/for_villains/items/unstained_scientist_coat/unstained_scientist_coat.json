@@ -1,0 +1,14 @@
+{
+  "id": "unstained_scientist_coat",
+  "name": "Scientist coat (Unstained)",
+  "purchase_setting": "count",
+  "price": 35.99,
+  "description": "Unstained variation of the Scientist Coat.",
+  "details": "details.txt",
+  "images": {
+    "thumbnail": "thumbnail.webp",
+    "gallery": [
+      "picture_1.webp",
+      "picture_2.webp"
+    ]}
+}
